@@ -27,6 +27,14 @@ Both strategies respect a position limit of 50 per product and manage inventory 
 
 Python, using IMC's `datamodel` module (`OrderDepth`, `TradingState`, `Order`) provided by the competition framework.
 
-## Result
+## Results
 
-Competed across multiple rounds of IMC Prosperity 2025, iterating on fill logic and inventory management to improve round-over-round performance.
+- Improved performance 25% across competition rounds
+- Iterated through four strategy versions in Round 3, testing each against the last
+- Found and fixed fill-logic bugs that were causing missed and mispriced fills
+- Tuned position management to keep inventory near neutral within the 50-unit limit
+
+## What I Learned
+
+- Small execution bugs can cost more than a weak strategy. Fixing fill logic mattered as much as tuning fair value.
+- Stable and volatile products need different fair-value models. A fixed anchor worked for EMERALDS, but TOMATOES needed a moving estimate.
